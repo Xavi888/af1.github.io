@@ -1,0 +1,28 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.courses-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.courses-list {
+    list-style: none;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.courses-list li {
+    display: flex;
+    justify-content: space-around;
+    background-color: #3a6d9c;
+    padding: 10px;
+    color: white;
+}
