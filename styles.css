@@ -15,6 +15,39 @@ body {
     margin-bottom: 50px;
 }
 
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: #c36eeb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+}
+
+.top_bar {
+    margin-inline: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+}
+
+.top_bar li {
+    margin: auto;
+    text-align: center;
+}
+
+.top_bar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
 header {
     background-color: #1879d4;
     color: #fff;

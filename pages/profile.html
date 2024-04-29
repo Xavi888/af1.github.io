@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil d'usuari</title>
-    <link rel="stylesheet" href="profile_styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/profile_styles.css">
 </head>
 <body>
     <div class="container">
         <header>
             <nav>
                 <ul class="top_bar">
-                    <li><a href="#">LearnChat</a></li>
-                    <span class="circle" id="profileButton">Perfil</span>
+                    <li><a href="../index.html">LearnChat</a></li>
+                    <a href="../pages/profile.html"><span class="circle" id="profileButton">Perfil</span></a>
                 </ul>
             </nav>
         </header>
         <section class="main-section">
             <div class="user_dataset">
                 <div class="data">
-                    <span class="grand_circle">User photo</span>
+                    <span class="grand_circle">Add user photo</span>
                     <p>Nom: User name</p>
                     <p>Edat: User age</p>
                     <p>Rol: User role</p>
@@ -27,28 +28,39 @@
                 </div>
             </div>
             <div class="courses">
-                <h2>Cursos</h2>
+                <h3>Cursos:</h3>
                 <div class="course">
                     <div class="course-info">
                         <div class="image-placeholder">PNG</div>
-                        <p>Curso 1</p>
+                        <p>Curs 1</p>
                         <span class="rating">Puntuación: 4.8</span>
                     </div>
                 </div>
                 <div class="course">
                     <div class="course-info">
                         <div class="image-placeholder">PNG</div>
-                        <p>Curso 2</p>
+                        <p>Curs 2</p>
                         <span class="rating">Puntuación: 3.5</span>
+                    </div>
+                </div>
+                <div class="add">
+                    <div class="course-info">
+                        <p class="course-add">Afegir nou curs</p>
+                        <span class="square-button" id="addButton">+</span>
                     </div>
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="copyright">
+                <p>Copyright © FHiC 23-24 - LearnChat</p>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="copyright">
-            <p>Copyright © FHiC 23-24 - LearnChat</p>
-        </div>
-    </footer>
+    <script>
+        document.getElementById("addButton").addEventListener("click", function() {
+            window.location.href = "../index.html"; // link al html de add course
+        });
+    </script>
 </body>
 </html>
