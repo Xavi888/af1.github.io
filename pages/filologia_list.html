@@ -12,19 +12,19 @@
         <header>
             <nav class="top_bar"> 
                 <li class="title"><a href="#">LearnChat</a></li>
-                <a href="../pages/profile.html"><span class="circle" id="profileButton">Perfil</span></a>
+                <a><span class="circle" id="profileButton">Perfil</span></a>
             </nav>
             <nav>
                 <ul class="nav-subjects">
-                    <li><a href="../pages/programacio_list.html">Programació</a></li>
-                    <li><a href="../pages/fotografia_list.html">Fotografia</a></li>
-                    <li><a href="../pages/filologia_list.html">Filologia</a></li>
-                    <li><a href="../pages/matematiques_list.html">Matemàtiques</a></li>
+                    <li><a>Programació</a></li>
+                    <li><a>Fotografia</a></li>
+                    <li><a>Filologia</a></li>
+                    <li><a>Matemàtiques</a></li>
                 </ul>
             </nav>
         </header>
         <section class="main-section">
-            <p>Has buscat un curs per 'Filologia:'</p>
+            <p>Has buscat un curs per 'Filologia':</p>
             <div class="courses-container">
                 <ul class="courses-list">
                     <li class="course-item">
@@ -69,5 +69,32 @@
             <a>Contacta'ns</a>
         </div>
     </footer>
+    <script>
+        document.getElementById("profileButton").addEventListener("click", function() {
+            window.location.href = "../pages/profile.html";
+        });
+
+        function addLink(parentElement, urls) {
+            var links = parentElement.querySelectorAll('a');
+            links.forEach(function(link, index) {
+                link.addEventListener('click', function(event) {
+                    if (window.location.href !== urls[index]) {
+                        event.preventDefault();
+                        window.location.href = urls[index];
+                    }
+                });
+            });
+        }
+
+        var subjectList = document.querySelector('.nav-subjects');
+        var urls = [
+            '../pages/programacio_list.html', 
+            '../pages/fotografia_list.html', 
+            '../pages/filologia_list.html', 
+            '../pages/matematiques_list.html'
+        ];
+
+        addLink(subjectList, urls);
+    </script>
 </body>
 </html>
