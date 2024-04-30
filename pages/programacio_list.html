@@ -75,8 +75,10 @@
             window.location.href = "./profile.html";
         });
 
-        document.querySelector(".course").addEventListener("click", function() {
-            window.location.href = "./course_spec.html";
+        document.querySelectorAll(".course").forEach(element => {
+            element.addEventListener("click", function() {
+                window.location.href = "./course_spec.html";
+            });
         });
 
         document.getElementById("machine-learning").addEventListener("click", function() {

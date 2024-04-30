@@ -72,15 +72,17 @@
     </footer>
     <script>
         document.getElementById("profileButton").addEventListener("click", function() {
-            window.location.href = "../pages/profile.html";
+            window.location.href = "./profile.html";
         });
 
-        document.querySelector(".course").addEventListener("click", function() {
-            window.location.href = "../pages/course_spec.html";
+        document.querySelectorAll(".course").forEach(element => {
+            element.addEventListener("click", function() {
+                window.location.href = "./course_spec.html";
+            });
         });
 
         document.getElementById("principiant-fotografia").addEventListener("click", function() {
-            window.location.href = "../pages/principiant-fotografia.html";
+            window.location.href = "./principiant-fotografia.html";
         });
 
         function addLink(parentElement, urls) {
