@@ -27,10 +27,9 @@
             <div class="user_dataset">
                 <div class="data">
                     <span class="grand_circle">Add user photo</span>
-                    <p>Nom: User name</p>
-                    <p>Edat: User age</p>
-                    <p>Rol: User role</p>
-                    <p>Contacte: User mail</p>
+                    <p class="name">User Example</p>
+                    <p>Teacher</p>
+                    <p>teacher@example.com</p>
                 </div>
             </div>
             <div class="courses">
@@ -72,7 +71,7 @@
         });
 
         document.getElementById("addButton").addEventListener("click", function() {
-            window.location.href = "../index.html"; // link al html de add course
+            window.location.href = "../pages/add_course.html";
         });
 
         function addLink(parentElement, urls) {

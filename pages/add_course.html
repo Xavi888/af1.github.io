@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afegir Curs</title>
+    <link rel="stylesheet" href="../css/profile_styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/add_course.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="top_bar"> 
+                <li class="title"><a href="#">LearnChat</a></li>
+                <a><span class="circle" id="profileButton">Perfil</span></a>
+            </nav>
+            <nav>
+                <ul class="nav-subjects" id="subjectList">
+                    <li><a>Programació</a></li>
+                    <li><a>Fotografia</a></li>
+                    <li><a>Filologia</a></li>
+                    <li><a>Matemàtiques</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="main-title">Afegir un nou curs</h1>
+        <section class="main-section">
+            <div class="user_dataset">
+                <h3 class="section-name">Nom del curs:</h3>
+                <input type="text" class="input_name" placeholder="Escriu aquí el nom">
+                <div class="level-select">
+                    <label for="nivel">Nivell de dificultat:</label>
+                    <select id="nivel">
+                        <option value="facil">Principiant</option>
+                        <option value="medio">Intermedi</option>
+                        <option value="dificil">Avançat</option>
+                    </select>
+                </div>
+                <div class="courses">
+                    <h3 class="section-name">Lliçons del curs:</h3>
+                    <div class="course">
+                        <div class="course-info">
+                            <p>Lliço 1</p>
+                            <span class="rating">Disponibilitat: Gratuïta</span>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="course-info">
+                            <p>Lliço 2</p>
+                            <span class="rating">Disponibilitat: Premium</span>
+                        </div>
+                    </div>
+                    <div class="add">
+                        <div class="course-info">
+                            <p class="course-add">Afegir lliçó</p>
+                            <span class="square-button" id="addButton">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user_dataset">
+                <div class="data">
+                    <span class="course_circle">Add course PNG</span>
+                    <h3 class="section-name">Descripció:</h3>
+                    <textarea class="input_desc" placeholder="Descripció del curs..."></textarea>
+                </div>
+            </div>
+        </section>
+        <button class="final-button" onclick="confirmation()">Afegir curs</button>
+        <footer>
+            <div class="copyright">
+                <p>Copyright © FHiC 23-24 - LearnChat</p>
+            </div>
+            <div class="contact">
+                <a>Contacta'ns</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("profileButton").addEventListener("click", function() {
+            window.location.href = "../pages/profile.html";
+        });
+
+        function addLink(parentElement, urls) {
+            var links = parentElement.querySelectorAll('a');
+            links.forEach(function(link, index) {
+                link.href = urls[index];
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = urls[index];
+                });
+            });
+        }
+
+        var subjectList = document.getElementById('subjectList');
+        var urls = [
+            '../pages/programacio_list.html', 
+            '../pages/fotografia_list.html', 
+            '../pages/filologia_list.html', 
+            '../pages/matematiques_list.html'
+        ];
+
+        addLink(subjectList, urls);
+
+        function confirmation() {
+            Swal.fire({
+                title: 'Estàs segur?',
+                text: "Estàs segur de que vols afegir aquest curs?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, afegir curs!',
+                cancelButtonText: 'Cancel·lar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Agregado!',
+                        "El curso s'ha afegit exitosament. Retornant al perfil...",
+                        'success'
+                    ).then(() => {
+                    window.location.href = "../pages/profile.html";
+                });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
