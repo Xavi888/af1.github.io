@@ -14,18 +14,21 @@
 
 .courses-list {
     list-style: none;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    padding: 0;
 }
 
 .courses-list li {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #3a6d9c;
     padding: 10px;
     color: white;
+}
+
+.courses-list li p {
+    margin: 0;
 }
 
 .image-placeholder {

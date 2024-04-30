@@ -13,7 +13,6 @@
 }
 
 .user_dataset {
-    width: 30%;
     padding-right: 20px;
     text-align: left;
     margin-right: auto;
@@ -89,21 +88,20 @@
 }
 
 .courses .course {
-    padding-left: 20px;
     background-color: #7eb0df;
     border: 1px solid #333;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    width: 700px;
+    width: 100%;
 }
 
 .courses .add {
-    padding-left: 20px;
     margin-bottom: 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 700px;
+    width: 100%;
 }
 
 .course-info {
@@ -111,7 +109,6 @@
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin-left: 20px;
 }
 
 .image-placeholder {
@@ -130,12 +127,7 @@
 }
 
 .course-add {
-    padding-left: 130px;
     font-weight: bold;
-}
-
-.rating {
-    margin-left: 250px;
 }
 
 .square-button {

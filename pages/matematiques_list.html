@@ -4,54 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Llista de Cursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/course_list_styles.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <div class="container">
+    <div>
         <header>
             <nav class="top_bar"> 
-                <li class="title"><a href="#">LearnChat</a></li>
+                <li class="title"><a href="../index.html">LearnChat</a></li>
                 <a><span class="circle" id="profileButton">Perfil</span></a>
             </nav>
             <nav>
-                <ul class="nav-subjects">
-                    <li><a>Programació</a></li>
-                    <li><a>Fotografia</a></li>
-                    <li><a>Filologia</a></li>
-                    <li><a>Matemàtiques</a></li>
+                <ul class="nav-subjects row" id="subjectList">
+                    <li class="col-sm"><a>Programació</a></li>
+                    <li class="col-sm"><a>Fotografia</a></li>
+                    <li class="col-sm"><a>Filologia</a></li>
+                    <li class="col-sm"><a>Matemàtiques</a></li>
                 </ul>
             </nav>
         </header>
         <section class="main-section">
             <p>Has buscat un curs per 'Matemàtiques':</p>
             <div class="courses-container">
-                <ul class="courses-list">
-                    <li class="course-item">
+                <ul class="courses-list d-grid gap-3">
+                    <li class="course-item row-sm">
                         <div class="image-placeholder">PNG</div>
                         <p>Curs 1</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
-                    <li class="course-item">
+                    <li class="course-item row-sm">
                         <div class="image-placeholder">PNG</div>
                         <p>Curs 2</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
-                    <li class="course-item">
+                    <li class="course-item row-sm">
                         <div class="image-placeholder">PNG</div>
                         <p>Curs 3</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
-                    <li class="course-item">
+                    <li class="course-item row-sm">
                         <div class="image-placeholder">PNG</div>
                         <p>Curs 4</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
-                    <li class="course-item">
+                    <li class="course-item row-sm">
                         <div class="image-placeholder">PNG</div>
                         <p>Curs 5</p>
                         <p>Nivell: Avançat</p>
@@ -100,5 +101,6 @@
 
         addLink(subjectList, urls);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

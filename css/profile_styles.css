@@ -1,15 +1,11 @@
-.main-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-}
-
 .user_dataset {
-    width: 30%;
-    padding-right: 20px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.main-section {
+    width: 100%;
 }
 
 .user_dataset .data {
@@ -40,29 +36,23 @@
     font-size: 20px;
     color: #000;
     margin: auto;
-}
-
-.courses {
-    margin-right: auto;
-    margin-left: auto;
+    margin-bottom: 20px;
 }
 
 .courses .course {
-    padding-left: 20px;
     background-color: #7eb0df;
     border: 1px solid #333;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    width: 700px;
+    width: 100%;
 }
 
 .courses .add {
-    padding-left: 20px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    width: 700px;
+    width: 100%;
 }
 
 .course-info {
@@ -70,6 +60,7 @@
     font-size: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .image-placeholder {
@@ -88,12 +79,7 @@
 }
 
 .course-add {
-    padding-left: 130px;
     font-weight: bold;
-}
-
-.rating {
-    margin-left: 250px;
 }
 
 .square-button {
