@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curs</title>
+    <link rel="stylesheet" href="../css/course_spec.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="top_bar"> 
+                <li class="title"><a href="#">LearnChat</a></li>
+                <a><span class="circle" id="profileButton">Perfil</span></a>
+            </nav>
+            <nav>
+                <ul class="nav-subjects">
+                    <li><a>Programació</a></li>
+                    <li><a>Fotografia</a></li>
+                    <li><a>Filologia</a></li>
+                    <li><a>Matemàtiques</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main-section">
+            <div class="titol">
+                <div class="image-placeholder">PNG</div>
+                <div>
+                    <h2>Curs 1</h2>
+                    <p>Nivell: Principiant</p>
+                </div>
+            </div>
+            <hr>
+            <div class="descripcio">
+                <p>Descripció:</p>
+                <p>
+                    Enim qui non sunt sint Lorem culpa. In enim cillum sunt nostrud fugiat minim ad minim ad est. 
+                    Veniam proident qui irure veniam enim eiusmod minim culpa eu. Elit id commodo excepteur culpa.
+                    Enim qui non sunt sint Lorem culpa. In enim cillum sunt nostrud fugiat minim ad minim ad est. 
+                    Veniam proident qui irure veniam enim eiusmod minim culpa eu. Elit id commodo excepteur culpa.
+                    Enim qui non sunt sint Lorem culpa. In enim cillum sunt nostrud fugiat minim ad minim ad est. 
+                    Veniam proident qui irure veniam enim eiusmod minim culpa eu. Elit id commodo excepteur culpa.
+                    Enim qui non sunt sint Lorem culpa. In enim cillum sunt nostrud fugiat minim ad minim ad est. 
+                    Veniam proident qui irure veniam enim eiusmod minim culpa eu. Elit id commodo excepteur culpa.
+                </p>
+            </div>
+            <hr>
+            <div class="llicons">
+                <p>Lliçons:</p>
+                <ul>
+                    <li>
+                        <p>Lliço 1</p>
+                        <p>Disponiblitat: Gratuita</p>
+                    </li>
+                    <li>
+                        <p>Lliço 2</p>
+                        <p>Disponiblitat: Subscripció</p>
+                    </li>
+                    <li>
+                        <p>Lliço 3</p>
+                        <p>Disponiblitat: Subscripció</p>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="valoracions">
+                <p>Valoracions:</p>
+                <div class="puntuacio">
+                    <img src="../images/image.png" alt="puntuacio estrelles">
+                    <p>Puntuació mitja: 4.2</p>
+                </div>
+                <ul class="comentaris">
+                    <li>
+                        <div>
+                            <p>Usuari 1:</p>
+                            <p>
+                                Minim ipsum aliqua ut Lorem est velit aute ea anim minim 
+                                commodo mollit dolor.commodo mollit dolor.commodo mollit dolor.
+                                Minim ipsum aliqua ut Lorem est velit aute ea anim minim 
+                                commodo mollit dolor.commodo mollit dolor.commodo mollit dolor.
+                            </p>
+                        </div>
+                        <p>Valoració: 4.5</p>
+                    </li>
+                    <li>
+                        <div>
+                            <p>Usuari 2:</p>
+                            <p>Minim ipsum aliqua ut Lorem est velit aute ea anim minim commodo mollit dolor.</p>
+                        </div>
+                        <p>Valoració: 3.5</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>Copyright © FHiC 23-24 - LearnChat</p>
+        </div>
+        <div class="contact">
+            <a>Contacta'ns</a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("profileButton").addEventListener("click", function() {
+            window.location.href = "../pages/profile.html";
+        });
+
+        function addLink(parentElement, urls) {
+            var links = parentElement.querySelectorAll('a');
+            links.forEach(function(link, index) {
+                link.addEventListener('click', function(event) {
+                    if (window.location.href !== urls[index]) {
+                        event.preventDefault();
+                        window.location.href = urls[index];
+                    }
+                });
+            });
+        }
+
+        var subjectList = document.querySelector('.nav-subjects');
+        var urls = [
+            '../pages/programacio_list.html', 
+            '../pages/fotografia_list.html', 
+            '../pages/filologia_list.html', 
+            '../pages/matematiques_list.html'
+        ];
+
+        addLink(subjectList, urls);
+    </script>
+</body>
+</html>

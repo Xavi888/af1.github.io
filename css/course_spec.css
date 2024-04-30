@@ -1,0 +1,83 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.titol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.image-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border: solid 1px black;
+}
+
+.descripcio {
+    width: 50%;
+}
+
+.llicons {
+    width: 100%;
+}
+
+.llicons ul {
+    list-style: none;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.llicons li {
+    display: flex;
+    justify-content: space-around;
+    background-color: #3a6d9c;
+    padding: 10px;
+    color: white;
+}
+
+.valoracions {
+    display: flex;
+    flex-direction: column;
+}
+
+.puntuacio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.valoracions img {
+    width: 200px;
+}
+
+.valoracions ul {
+    list-style: none;
+    padding: 0;
+    width: 30%;
+}
+
+.valoracions li {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    background-color: black;
+}

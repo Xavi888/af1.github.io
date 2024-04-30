@@ -28,31 +28,31 @@
             <div class="courses-container">
                 <ul class="courses-list">
                     <li class="course-item">
-                        <img src="" alt="">
+                        <div class="image-placeholder">PNG</div>
                         <p>Curs 1</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
                     <li class="course-item">
-                        <img src="" alt="">
+                        <div class="image-placeholder">PNG</div>
                         <p>Curs 2</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
                     <li class="course-item">
-                        <img src="" alt="">
+                        <div class="image-placeholder">PNG</div>
                         <p>Curs 3</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
                     <li class="course-item">
-                        <img src="" alt="">
+                        <div class="image-placeholder">PNG</div>
                         <p>Curs 4</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
                     </li>
                     <li class="course-item">
-                        <img src="" alt="">
+                        <div class="image-placeholder">PNG</div>
                         <p>Curs 5</p>
                         <p>Nivell: Avançat</p>
                         <p>Puntuació: 4.8</p>
@@ -72,6 +72,10 @@
     <script>
         document.getElementById("profileButton").addEventListener("click", function() {
             window.location.href = "../pages/profile.html";
+        });
+
+        document.querySelector(".course-item").addEventListener("click", function() {
+            window.location.href = "../pages/course_spec.html";
         });
 
         function addLink(parentElement, urls) {
