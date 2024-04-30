@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/course_spec.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div>
+        <header>
+            <nav class="top_bar"> 
+                <li class="title"><a href="../index.html">LearnChat</a></li>
+                <a><span class="circle" id="profileButton">Perfil</span></a>
+            </nav>
+            <nav>
+                <ul class="nav-subjects row" id="subjectList">
+                    <li class="col-sm"><a>Programació</a></li>
+                    <li class="col-sm"><a>Fotografia</a></li>
+                    <li class="col-sm"><a>Filologia</a></li>
+                    <li class="col-sm"><a>Matemàtiques</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main-section row container">
+            <div class="titol">
+                <div class="image-placeholder">PNG</div>
+                <div>
+                    <h2>Machine Learning</h2>
+                    <p>Nivell: Avançat</p>
+                </div>
+            </div>
+            <hr>
+            <div class="descripcio">
+                <p>Descripció:</p>
+                <p>Descobreix el món fascinant del machine learning en aquest curs complet, dissenyat tant per a principiants com per a aquells que volen aprofundir els seus coneixements en aquest camp revolucionari. A través de 10 mòduls intensius, aprendràs els fonaments teòrics i pràctics del machine learning. Començarem amb una introducció als conceptes bàsics, com ara els tipus d'aprenentatge (supervisat, no supervisat i per reforç) i les principals tècniques utilitzades en el sector.</p>
+                <p>Progressivament, avançarem cap a algoritmes més complexes, com ara xarxes neuronals, arbres de decisió i màquines de vectors de suport. El curs també inclou sessions pràctiques on implementaràs models amb Python i biblioteques populars com TensorFlow i Scikit-Learn, permetent-te desenvolupar i entrenar els teus propis models amb dades reals.</p>
+                <p>A més, cada mòdul inclou reptes i projectes per consolidar el que has après i demostrar les teves habilitats resolent problemes reals de machine learning. Amb suport continu i una comunitat en línia, estaràs preparat per fer el salt a una carrera emocionant en el món de la intel·ligència artificial.</p>
+                <p>Inscriu-te avui i comença el teu viatge cap a convertir-te en un expert en machine learning!</p>
+            </div>
+            <hr>
+            <div class="llicons">
+                <p>Lliçons:</p>
+                <ul>
+                    <li>
+                        <p>Classe 1: Introducció al Machine Learning</p>
+                        <p>Disponiblitat: Gratuita</p>
+                    </li>
+                    <li>
+                        <p>Classe 2: Preprocessament de Dades</p>
+                        <p>Disponiblitat: Subscripció</p>
+                    </li>
+                    <li>
+                        <p>Classe 3: Regressió Lineal i Logística</p>
+                        <p>Disponiblitat: Subscripció</p>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="valoracions">
+                <p>Valoracions:</p>
+                <div class="puntuacio">
+                    <img src="../images/image.png" alt="puntuacio estrelles">
+                    <p>Puntuació mitja: 4.2</p>
+                </div>
+                <ul class="comentaris">
+                    <li>
+                        <div>
+                            <p>Laura G.</p>
+                            <p>
+                                Increïble curs d'introducció! La Classe 1 va ser perfecta per entendre els bàsics i realment em va ajudar a veure el potencial del machine learning. Els instructors fan un treball fantàstic explicant conceptes complexos de manera senzilla.
+                            </p>
+                        </div>
+                        <p>Valoració: 4.5</p>
+                    </li>
+                    <li>
+                        <div>
+                            <p>Marc P.</p>
+                            <p>
+                                Vaig quedar impressionat amb la qualitat del material, especialment en la Classe 3 sobre regressió. Les sessions pràctiques són molt útils i m'han permès aplicar immediatament el que he après amb dades reals. Recomano aquest curs a tothom que estigui interessat en fer un salt en la seva carrera.
+                            </p>
+                        </div>
+                        <p>Valoració: 3.5</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>Copyright © FHiC 23-24 - LearnChat</p>
+        </div>
+        <div class="contact">
+            <a>Contacta'ns</a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("profileButton").addEventListener("click", function() {
+            window.location.href = "../pages/profile.html";
+        });
+
+        function addLink(parentElement, urls) {
+            var links = parentElement.querySelectorAll('a');
+            links.forEach(function(link, index) {
+                link.addEventListener('click', function(event) {
+                    if (window.location.href !== urls[index]) {
+                        event.preventDefault();
+                        window.location.href = urls[index];
+                    }
+                });
+            });
+        }
+
+        var subjectList = document.querySelector('.nav-subjects');
+        var urls = [
+            '../pages/programacio_list.html', 
+            '../pages/fotografia_list.html', 
+            '../pages/filologia_list.html', 
+            '../pages/matematiques_list.html'
+        ];
+
+        addLink(subjectList, urls);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

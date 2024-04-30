@@ -24,7 +24,13 @@
     align-items: center;
     background-color: #3a6d9c;
     padding: 10px;
+    border-radius: 5px;
     color: white;
+    transition: .5s;
+}
+
+.courses-list li:hover {
+    background-color: #ffab2e;
 }
 
 .courses-list li p {

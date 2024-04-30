@@ -4,6 +4,16 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.main-section {
+    height: 100%;
+}
+
+.benvinguda {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
 .circle {
     width: 60px;
     height: 60px;

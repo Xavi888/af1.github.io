@@ -44,6 +44,17 @@
     background-color: #3a6d9c;
     padding: 10px;
     color: white;
+    border-radius: 5px;
+    transition: .5s;
+    padding: 20px;
+}
+
+.llicons li:hover {
+    background-color: #ffab2e;
+}
+
+.llicons li p {
+    margin: 0;
 }
 
 .valoracions {
